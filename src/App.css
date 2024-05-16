@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+.container{
+margin: auto 5%;
+}
+
+.productHead{
+   text-align: center;
+}
+
+.image{
+    cursor: pointer;
+}
+
+.counter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter span{
+    cursor: pointer;
+}
+
+.cart{
+    display: flex;
+    justify-content: space-between;
+  
+    padding-top: 10px;
+}
