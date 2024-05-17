@@ -1,0 +1,40 @@
+/* App.css */
+
+.container {
+    padding: 20px;
+  }
+  
+  .productHead {
+    text-align: center;
+  }
+  
+  .product-detail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .counter span {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  .image {
+    cursor: pointer;
+  }
+  
+  .cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

@@ -20,30 +20,30 @@ function Home() {
       },
       {
         id: 2,
-        name: "Laptop",
+        name: "Phone",
         description:
           "Powerful laptop with Intel Core i7 processor, 16GB RAM, and 512GB SSD storage.",
         price: 99.99,
         category: "Electronics",
-        image: "https://www.asus.com/media/Odin/Websites/global/Series/24.png",
+        image: "https://images.samsung.com/is/image/samsung/p6pim/bd/sm-a057flvhbkd/gallery/bd-galaxy-a05s-sm-a057-sm-a057flvhbkd-thumb-539556309?$344_344_PNG$",
       },
       {
         id: 3,
-        name: "Laptop",
+        name: "HeadPhone",
         description:
           "Powerful laptop with Intel Core i7 processor, 16GB RAM, and 512GB SSD storage.",
         price: 59.99,
         category: "Electronics",
-        image: "https://www.asus.com/media/Odin/Websites/global/Series/24.png",
+        image: "https://www.energysistem.com/cdnassets/products/45305/principal_2000.jpg",
       },
       {
         id: 4,
-        name: "Laptop",
+        name: "Charger",
         description:
           "Powerful laptop with Intel Core i7 processor, 16GB RAM, and 512GB SSD storage.",
         price: 69.99,
         category: "Electronics",
-        image: "https://www.asus.com/media/Odin/Websites/global/Series/24.png",
+        image: "https://m.media-amazon.com/images/I/51QLU+bV6vL._AC_UF1000,1000_QL80_.jpg",
       },
       {
         id: 5,
@@ -51,8 +51,8 @@ function Home() {
         description:
           "Powerful laptop with Intel Core i7 processor, 16GB RAM, and 512GB SSD storage.",
         price: 9.99,
-        category: "Electronics",
-        image: "https://www.asus.com/media/Odin/Websites/global/Series/24.png",
+        category: "AirPods",
+        image: "https://media.wired.com/photos/59e94ff8ce22fd0cca3c5242/master/w_2560%2Cc_limit/headphones-edit-1.jpg",
       },
     ],
   };
@@ -94,6 +94,10 @@ function Home() {
         navigate("/cart",{state:cart})
   }
 
+  function handleProductClick(product) {
+    navigate(`/product/${product.id}`, { state: { product } });
+  }
+
 
 
 
@@ -112,13 +116,14 @@ function Home() {
         <Grid container spacing={3} mt={2}>
           {productsData.products.map((product) => (
             <Grid item xs={12} sm={6} md={4} lg={3} key={product.id}>
-              <Card>
+              <Card  >
                 <CardMedia
                   component="img"
                   className="image"
                   height="300"
                   image={product.image}
                   alt={product.name}
+                  onClick={() => handleProductClick(product)}
                 />
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
